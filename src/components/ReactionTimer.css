@@ -1,0 +1,44 @@
+.reaction-timer {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 40px;
+    max-width: 450px;
+    margin: 50px auto;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.reaction-timer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.reaction-timer .box {
+    padding: 40px 20px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reaction-timer .box.waiting {
+    background-color: #222;
+}
+
+.reaction-timer .box.ready {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.reaction-timer p {
+    margin: 0;
+    font-size: 18px;
+}

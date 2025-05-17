@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Tektur:wght@400..900&display=swap'); 
+ 
+.projects-section h2{
+    font-family: 'Tektur', sans-serif;
+     font-size: 2rem;
+text-decoration: underline black;
+  margin-bottom: 2rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+
+
+h6{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-card {
+    max-width: 800px;
+    margin: auto;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    
+}
+
+.project-card:nth-child(1) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.731), black);
+}
+
+.project-card:nth-child(2) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(0, 128, 0, 0.776), black);
+}
+
+.project-card:nth-child(3) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(0, 255, 255, 0.758), black);
+}
+
+.project-card:nth-child(4) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(255, 166, 0, 0.74), black);
+}
+
+.project-card:nth-child(5) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(128, 0, 128, 0.804), black);
+}
+
+.project-card:nth-child(6) .project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(255, 0, 0, 0.795), black);
+}
+
+
+.project-image-wrapper {
+    transition: background-image 0.3s ease;
+    padding: 18px;
+}
+.project-image-wrapper:hover {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.489), black);
+    border-radius: 12px;
+}
+
+.project-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: translateY(-6px);
+}
+
+.project-info {
+    padding: 1rem;
+    background: linear-gradient(to bottom, black, transparent);
+    border-top: 2px solid black;
+}
+
+
+.project-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+}
+
+.project-info p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.project-btn1 {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.project-btn1:hover {
+    transform: translateY(-2px);
+    background-color: #3a3a3a;
+    border-color: #666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tec-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.tech {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.tech li {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.tech li:hover {
+    transform: translateY(-2px);
+    background-color: #3a3a3a;
+    border-color: #666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .tec-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .project-buttons {
+        width: 100%;
+    }
+
+    .tech {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
