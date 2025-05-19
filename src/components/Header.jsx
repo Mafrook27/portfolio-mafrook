@@ -32,7 +32,7 @@ const Header = () => {
             data-aos-offset="300"
             data-aos-duration="1000"
             data-aos-easing="ease-in-sine"
-          >
+           >
             <h1>
               Hello I'm <span className="bold">Mafrook.</span>
               <br />
@@ -89,10 +89,10 @@ const Header = () => {
               <img
                 src={meReal}
                 alt="Madesh Real"
-                data-aos="fade-down-left"
-                data-aos-duration="5000"
+                data-aos="fade-left"
+                data-aos-duration="1000"
                  data-aos-mirror="true"
-                data-aos-offset="300"
+                data-aos-offset="100"
                 className="real-img transition-img"
               />
             </div>

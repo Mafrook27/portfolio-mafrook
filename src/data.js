@@ -73,7 +73,7 @@ export const tools = [
 export const projects = [
   {
     title: 'porofolio website',
-    desc: 'A stylish and responsive event management website designed to facilitate event bookings and information sharing.',
+    desc: 'A sleek, responsive personal portfolio built with React that showcases my skills, projects, and experience. The website combines modern UI/UX design with rich animations using GSAP (GreenSock Animation Platform) and AOS (Animate On Scroll) to create smooth transitions and engaging user interactions. Designed with a clean layout, subtle motion effects, and dynamic components to offer an impressive and interactive browsing experience.',
     src: img1,
     github: '#home',
     technologies: ['HTML', 'CSS', 'JavaScript','react']

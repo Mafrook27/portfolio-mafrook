@@ -13,7 +13,7 @@ background-color: #ffffff;
 .container-wrapper {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 40px;
     padding: 40px;
     flex-wrap: wrap;

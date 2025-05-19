@@ -2,7 +2,7 @@
  
  .nav-menu a{
     font-family: 'Tektur', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 
  }
  .nav-menu a:hover{
@@ -26,8 +26,8 @@
           align-items: center;
           padding: 0 5%;
 
-background: rgba(255, 255, 255, 0.781);
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+background: rgba(255, 255, 255, 0.541);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.39);
 backdrop-filter: blur( 8px );
 -webkit-backdrop-filter: blur( 8px );
 border-radius: 10px;
@@ -57,7 +57,29 @@ border-radius: 10px;
         .logo-text {
          
   font-family: "tektur", sans-serif;
-    font-size: 1.5rem;
+     font-size: 1.7rem;
+  font-weight: bold;
+ 
+  color: #1f2937;
+}
+
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 
@@ -199,7 +221,7 @@ border-radius: 10px;
     display: flex;
     flex-direction: row;
     padding: 15px 5%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .logo-text {

@@ -10,6 +10,13 @@ body {
   color: #111;
 }
 
+
+
+
+.hero-text{
+    font-family: 'Tektur', sans-serif;
+    font-size: 1.2rem;;
+}
 .container {
   max-width: 1200px;
   margin: 50px;
@@ -67,9 +74,10 @@ body {
 }
 
 .stroke-text {
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px rgba(66, 211, 22, 0.685);
   color: transparent;
   font-weight: 700;
+  transition: 2ms;
 }
 
 @-webkit-keyframes pulseText {

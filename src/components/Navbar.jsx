@@ -113,7 +113,7 @@ const Navbar = ({items}) => {
         {/* Desktop menu */}
         <div className="desktop-menu-wrapper">
         <div className="desktop-menu-logo">
-         <h1 className="logo-text">{"<Mafrook👋/>"}</h1>
+         <h1 className="logo-text"> &lt;Mafrook <span className="wave">👋</span> /&gt;</h1>
         </div>
         <div className="desktop-menu">
           {items.map((item, index) => {
