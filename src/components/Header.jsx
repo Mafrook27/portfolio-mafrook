@@ -90,9 +90,9 @@ const Header = () => {
                 src={meReal}
                 alt="Madesh Real"
                 data-aos="fade-left"
-                data-aos-duration="1000"
+                data-aos-duration="5000"
                  data-aos-mirror="true"
-                data-aos-offset="100"
+                data-aos-offset="300"
                 className="real-img transition-img"
               />
             </div>

@@ -13,28 +13,25 @@
  
  
  
- .nav-menu {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-    
-          z-index: 1000;
-          transition: transform 0.4s ease;
-          /* display: flex; */
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 5%;
-
-background: rgba(255, 255, 255, 0.541);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.39);
-backdrop-filter: blur( 8px );
--webkit-backdrop-filter: blur( 8px );
-border-radius: 10px;
-
-
-
-        }
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Add these properties */
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+    display: flex !important; /* Force display flex */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: rgba(255, 255, 255, 0.541);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.39);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+}
         
         /* Show/hide navigation */
         .nav-visible {
@@ -50,6 +47,8 @@ border-radius: 10px;
   display: flex;
     justify-content: space-around;
     align-items: center;
+      width: 100%;
+    padding: 0 2rem;
     
     
 }
@@ -87,6 +86,7 @@ border-radius: 10px;
           display: flex;
           position: relative;
           margin-left: auto;
+           gap: 2rem;
         }
         
         .nav-link {
@@ -110,6 +110,13 @@ border-radius: 10px;
           transition: all 0.4s ease;
         }
         
+.desktop-menu-logo {
+    margin-right: 3rem; /* Add right margin to create space */
+}
+
+
+
+
         /* Mobile menu toggle */
         .mobile-menu-toggle {
           display: none;
@@ -208,25 +215,47 @@ border-radius: 10px;
         }
         
         /* Responsive styles */
-      @media (max-width: 768px) {
-  .desktop-menu {
-    display: none;
-  }
-  
-  .mobile-menu-toggle {
-    display: block;
-  }
-  
-  .nav-menu {
-    display: flex;
-    flex-direction: row;
-    padding: 15px 5%;
-    justify-content: space-between;
-  }
+    @media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        padding: 15px 5%;
+        /* Remove flex-direction: row since it's already flex */
+        transform: translateY(0); /* Ensure no unwanted transitions */
+    }
 
-  .logo-text {
-    font-size: 1.3rem;
-  }
+    /* Add specific positioning for logo and menu items */
+    .desktop-menu-wrapper {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+     .nav-menu {
+        padding: 15px 5%;
+        justify-content: space-between; /* Ensure space between items */
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+        /* Prevent unwanted movements */
+        transform: translateX(0);
+          white-space: nowrap;
+        transition: none;
+    }
+      .desktop-menu-logo {
+        margin-right: 1.5rem;
+    }
+    .mobile-menu-toggle {
+        margin-left: auto; /* Push hamburger menu to the right */
+    }
 }
 
 @media (max-width: 480px) {
