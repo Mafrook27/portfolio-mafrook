@@ -33,7 +33,7 @@ const ProgressRing = ({ pct, color, size = 40 }) => {
   );
 };
 
-const SkillCard = ({ skill, catConfig, index }) => {
+const SkillCard = ({ skill, catConfig }) => {
   const Icon = skill.icon;
   const level = getLevelInfo(skill.percentage);
 
@@ -103,7 +103,7 @@ const CategoryBlock = ({ config, skills }) => {
 
       <div className="skill-bc-grid">
         {skills.map((skill, i) => (
-          <SkillCard key={i} skill={skill} catConfig={config} index={i} />
+          <SkillCard key={i} skill={skill} catConfig={config} />
         ))}
       </div>
     </div>

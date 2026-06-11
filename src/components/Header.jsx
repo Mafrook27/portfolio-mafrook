@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import meReal from "./../profile-images/phtoo.png";
 import { socialLinks } from "./../data.js";
 import Aurora from "./Aurora";
