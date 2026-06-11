@@ -1,100 +1,63 @@
-// import meLego from './../profile-images/lego-ph.png';
 import React, { useEffect } from "react";
-
 import meReal from "./../profile-images/phtoo.png";
 import { socialLinks } from "./../data.js";
 import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Header.css";
+
 const Header = () => {
   useEffect(() => {
-    AOS.init({
-    duration: 1000,
-    once: false,
-    mirror: true,
-    delay: 0,
-    anchorPlacement: 'top-bottom',
-    useClassNames: true,
-    disableMutationObserver: false,
-    offset: 120
-    });
-      window.addEventListener('scroll', function() {
-    AOS.refresh();
-  });
+    AOS.init({ duration: 800, once: true, offset: 80 });
   }, []);
 
   return (
     <header className="header-wrapper">
       <section className="hero-section">
-        <div className="container hero-container">
-          <div
-            className="hero-text"
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-sine"
-           >
+        <div className="hero-container">
+          <div className="hero-text" data-aos="fade-right">
+            <div className="hero-eyebrow">Available for opportunities</div>
             <h1>
-              Hello I'm <span className="bold">Mafrook.</span>
+              Hello, I'm <span className="name-accent">Mafrook.</span>
               <br />
-              <span className="bold">
-                Software{" "}
-                <span
-                  className="stroke-text"
-                  data-aos="fade-down"
-                  data-aos-duration="5000"
-                >
-                  Developer
-                </span>
-              </span>
+              <span className="stroke-text">Software Developer</span>
             </h1>
             <p>
               I'm an enthusiastic developer with a solid foundation in
               programming and problem-solving. I enjoy crafting innovative and
               user-friendly applications while continuously exploring new
-              technologies to enhance my skills. I'm dedicated to bringing ideas
-              to life with technology.
+              technologies to enhance my skills.
             </p>
-            <div className="social-icons">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button data-aos="zoom-in-right">
-                    <img
-                      src={social.img}
-                      alt={social.name}
-                      className="social-icon"
-                    />
-                  </button>
-                </a>
-              ))}
+            <div className="hero-actions">
+              <div className="social-icons">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.name}
+                  >
+                    <button aria-label={social.name}>
+                      <img src={social.img} alt={social.name} />
+                    </button>
+                  </a>
+                ))}
+              </div>
               <a
                 href="/logos/resume-mafrook.pdf"
                 download="Mafrook_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="resume-btn"
               >
-                <button className="resume-btn">
-                  <b className="resu-text">Resume</b>
-                </button>
+                Download CV
               </a>
             </div>
           </div>
-          <div className="hero-image">
-            <div className="image-wrapper">
-              {/* <img src={meLego} alt="Madesh LEGO" className="lego-img transition-img" /> */}
-              <img
-                src={meReal}
-                alt="Madesh Real"
-                data-aos="fade-left"
-                data-aos-duration="5000"
-                 data-aos-mirror="true"
-                data-aos-offset="300"
-                className="real-img transition-img"
-              />
+
+          <div className="hero-image" data-aos="fade-left">
+            <div className="hero-image-frame">
+              <img src={meReal} alt="Mafrook" className="real-img" />
             </div>
           </div>
         </div>

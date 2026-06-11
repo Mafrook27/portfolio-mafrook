@@ -1,28 +1,48 @@
-
+import React, { useEffect } from 'react';
 import './Education.css';
 import { FaGraduationCap } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-AOS.init();
-
 const Education = () => {
-  return (
-  
-    <section className="education-section" id="education">
-         <h2>🎓 Education</h2>
-      <div className="education-container" data-aos="fade-up">
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  }, []);
 
-        <div className="education-info">
-          <h3 className="education-title">Bachelor of Engineering (CSE) - 2024</h3>
-          <p className="education-description">
-            First class Graduate, completed B.E. in Computer Science and Engineering in 2024.</p>
-     <p className="education-description">
-  Graduated from college with a strong focus on software development, web technologies, and cloud fundamentals.
-   </p>
-   <p className="education-desc">E.G.S. Pillay Engineering College</p>
-      <p className="education-desc">Nagapattinam, Tamil Nadu, India</p>
-       <p className="education-desc">GPA: 8.1</p>
+  return (
+    <section className="education-section">
+      <div className="s-container">
+        <div className="section-heading-line" data-aos="fade-up">
+          <h2 className="section-heading">Education</h2>
+        </div>
+        <div className="education-container" data-aos="fade-up" data-aos-delay="100">
+          <div className="education-icon-wrapper">
+            <FaGraduationCap />
+          </div>
+          <div className="education-info">
+            <h3 className="education-title">Bachelor of Engineering — Computer Science</h3>
+            <p className="education-description">
+              First class graduate with a strong focus on software development, web technologies,
+              and cloud fundamentals. Completed B.E. in Computer Science and Engineering in 2024.
+            </p>
+            <div className="education-meta">
+              <span className="education-meta-item">
+                <span className="meta-label">Institution:</span>
+                E.G.S. Pillay Engineering College
+              </span>
+              <span className="education-meta-item">
+                <span className="meta-label">Location:</span>
+                Nagapattinam, Tamil Nadu, India
+              </span>
+              <span className="education-meta-item">
+                <span className="meta-label">Year:</span>
+                2024
+              </span>
+            </div>
+            <div className="education-badge">
+              🎓 GPA: 8.1 / 10 — First Class
+            </div>
+          </div>
         </div>
       </div>
     </section>

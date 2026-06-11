@@ -1,47 +1,59 @@
-import React from 'react';
-
-
+import React, { useEffect } from 'react';
 import './Projects.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { projects } from './../data.js';
 
-
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  }, []);
+
   return (
     <section className="projects-section">
-      <h2 className="head">Projects</h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index} data-aos="fade-up">
-            <div className="project-image-wrapper">
-              <img src={project.src} alt={project.title} className="project-image" />
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.desc}</p>
-             <div className="tec-wrapper">
-              <div className="project-buttons">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-btn1"
-                >
-                  <i className="fa-brands fa-github" style={{ marginRight: '8px' }}></i>
-                  Source
-                </a>
-            
+      <div className="s-container">
+        <div className="section-heading-line" data-aos="fade-up">
+          <h2 className="section-heading">Featured Projects</h2>
+        </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div className="project-image-wrapper">
+                <img src={project.src} alt={project.title} className="project-image" />
+                <div className="project-image-overlay">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-overlay-link"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    View Source ↗
+                  </a>
                 </div>
-            
-               <ul className='tech'>
-                  {project.technologies.map((tech, i) => (
-                    <li key={i}>{tech}</li>
-                  ))}
-                </ul>
+              </div>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.desc}</p>
+                <div className="project-footer">
+                  <ul className="tech">
+                    {project.technologies.map((tech, i) => (
+                      <li key={i}>{tech}</li>
+                    ))}
+                  </ul>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn1"
+                  >
+                    Source
+                  </a>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
