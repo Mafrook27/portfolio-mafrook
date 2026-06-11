@@ -6,10 +6,10 @@ import { projects } from './../data.js';
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({ duration: 850, once: true, offset: 60 });
+    AOS.init({ duration: 750, once: true, offset: 60 });
   }, []);
 
-  const tags = ['⭐ Featured Work', '🛠 Side Project', '🔐 Backend Project'];
+  const tags = ['Featured Work', 'Side Project', 'Backend Project'];
 
   return (
     <section className="projects-section">
@@ -48,7 +48,8 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="project-link-arrow"
                   >
-                    View Source <span className="pla-arrow">↗</span>
+                    View Source
+                    <span className="pla-arrow">{'\u2197'}</span>
                   </a>
                 </div>
               </div>

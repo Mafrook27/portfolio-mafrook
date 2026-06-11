@@ -1,17 +1,17 @@
 import React from 'react';
 import './Education.css';
 import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaUniversity } from 'react-icons/fa';
-import TiltCard from './TiltCard';
+import SpotlightCard from './SpotlightCard';
 
 const Education = () => {
   return (
     <section className="education-section">
       <div className="s-container">
-        <div className="section-heading-line">
+        <div className="section-heading-line" data-aos="fade-up">
           <h2 className="section-heading">Education</h2>
         </div>
 
-        <TiltCard className="education-card" maxTilt={4} scaleOnHover={1.01}>
+        <SpotlightCard className="education-card" spotlightColor="rgba(13, 148, 136, 0.08)">
           <div className="edu-top">
             <div className="edu-icon-col">
               <div className="edu-icon-wrap">
@@ -26,7 +26,7 @@ const Education = () => {
                   <h3 className="education-title">Bachelor of Engineering</h3>
                   <p className="edu-field">Computer Science & Engineering</p>
                 </div>
-                <div className="education-badge">🎓 First Class</div>
+                <div className="education-badge">First Class</div>
               </div>
 
               <p className="education-description">
@@ -60,7 +60,7 @@ const Education = () => {
               </div>
             </div>
           </div>
-        </TiltCard>
+        </SpotlightCard>
       </div>
     </section>
   );

@@ -30,7 +30,7 @@ const Navbar = ({items}) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 68;
+      const offset = 64;
       const top = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }

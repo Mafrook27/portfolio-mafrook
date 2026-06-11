@@ -11,7 +11,7 @@ const BounceCard = ({
 
   const handleEnter = () => {
     if (!ref.current) return;
-    ref.current.style.transform = `rotate(0deg) translateY(-14px) scale(1.06)`;
+    ref.current.style.transform = `rotate(0deg) translateY(-8px) scale(1.03)`;
     ref.current.style.zIndex = '20';
     ref.current.style.boxShadow = 'var(--bounce-shadow-hover)';
   };
@@ -30,8 +30,8 @@ const BounceCard = ({
       style={{
         ...style,
         transform: `rotate(${rotation}deg) translateY(0) scale(1)`,
-        '--bounce-shadow':        '0 2px 12px rgba(0,0,0,0.07)',
-        '--bounce-shadow-hover':  '0 20px 44px rgba(0,0,0,0.14)',
+        '--bounce-shadow':        'var(--shadow-sm)',
+        '--bounce-shadow-hover':  'var(--shadow-lg)',
       }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}

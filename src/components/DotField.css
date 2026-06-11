@@ -1,0 +1,8 @@
+.dot-field {
+  animation: dotFieldFade 1s ease-out;
+}
+
+@keyframes dotFieldFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

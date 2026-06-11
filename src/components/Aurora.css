@@ -10,70 +10,70 @@
 .aurora-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(100px);
   will-change: transform;
   mix-blend-mode: multiply;
 }
 
 .a1 {
-  width: 55vw;
-  height: 55vw;
-  max-width: 680px;
-  max-height: 680px;
-  background: radial-gradient(circle, rgba(99,102,241,0.28) 0%, rgba(139,92,246,0.12) 55%, transparent 75%);
-  top: -20%;
-  right: -10%;
-  animation: drift1 18s ease-in-out infinite alternate;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, rgba(13, 148, 136, 0.05) 50%, transparent 70%);
+  top: -15%;
+  right: -8%;
+  animation: drift1 22s ease-in-out infinite alternate;
 }
 
 .a2 {
-  width: 45vw;
-  height: 45vw;
-  max-width: 560px;
-  max-height: 560px;
-  background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, rgba(6,182,212,0.1) 50%, transparent 72%);
-  bottom: -15%;
-  left: -8%;
-  animation: drift2 22s ease-in-out infinite alternate;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  background: radial-gradient(circle, rgba(87, 83, 78, 0.06) 0%, rgba(68, 64, 60, 0.03) 50%, transparent 70%);
+  bottom: -10%;
+  left: -5%;
+  animation: drift2 26s ease-in-out infinite alternate;
 }
 
 .a3 {
-  width: 35vw;
-  height: 35vw;
-  max-width: 440px;
-  max-height: 440px;
-  background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(239,68,68,0.08) 50%, transparent 72%);
-  top: 30%;
-  left: 30%;
-  animation: drift3 26s ease-in-out infinite alternate;
+  width: 30vw;
+  height: 30vw;
+  max-width: 400px;
+  max-height: 400px;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.06) 0%, rgba(5, 150, 105, 0.03) 50%, transparent 70%);
+  top: 35%;
+  left: 35%;
+  animation: drift3 30s ease-in-out infinite alternate;
 }
 
 .a4 {
-  width: 30vw;
-  height: 30vw;
-  max-width: 380px;
-  max-height: 380px;
-  background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, rgba(99,102,241,0.08) 50%, transparent 70%);
-  bottom: 10%;
-  right: 15%;
-  animation: drift4 20s ease-in-out infinite alternate;
+  width: 25vw;
+  height: 25vw;
+  max-width: 350px;
+  max-height: 350px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.05) 0%, rgba(8, 145, 178, 0.025) 50%, transparent 70%);
+  bottom: 15%;
+  right: 20%;
+  animation: drift4 24s ease-in-out infinite alternate;
 }
 
 @keyframes drift1 {
   from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-6%, 8%) scale(1.1); }
+  to   { transform: translate(-5%, 6%) scale(1.08); }
 }
 @keyframes drift2 {
   from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(8%, -6%) scale(1.08); }
+  to   { transform: translate(6%, -5%) scale(1.06); }
 }
 @keyframes drift3 {
   from { transform: translate(0, 0) scale(1) rotate(0deg); }
-  to   { transform: translate(-5%, 5%) scale(1.12) rotate(15deg); }
+  to   { transform: translate(-4%, 4%) scale(1.1) rotate(12deg); }
 }
 @keyframes drift4 {
   from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(5%, -8%) scale(1.06); }
+  to   { transform: translate(4%, -6%) scale(1.05); }
 }
 
 @media (prefers-reduced-motion: reduce) {

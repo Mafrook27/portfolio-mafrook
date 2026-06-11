@@ -2,9 +2,13 @@
   position: relative;
   cursor: default;
   transition:
-    transform   0.48s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow  0.35s ease,
+    transform   0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow  0.25s ease,
     z-index     0s;
   will-change: transform;
-  box-shadow: var(--bounce-shadow, 0 2px 12px rgba(0,0,0,0.07));
+  box-shadow: var(--bounce-shadow, var(--shadow-sm));
+}
+
+.bounce-card:hover {
+  box-shadow: var(--bounce-shadow-hover, var(--shadow-lg));
 }
