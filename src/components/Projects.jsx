@@ -16,49 +16,45 @@ const Projects = () => {
           <h2 className="section-heading">Featured Projects</h2>
         </div>
 
-        <div className="projects-grid">
+        <div className="projects-list">
           {projects.map((project, index) => (
             <div
-              className="project-card"
+              className={`project-featured ${index % 2 === 1 ? 'project-featured--reverse' : ''}`}
               key={index}
               data-aos="fade-up"
-              data-aos-delay={index * 100}
+              data-aos-delay={index * 80}
             >
-              <div className="project-image-wrapper">
-                <img src={project.src} alt={project.title} className="project-image" />
-                <div className="project-image-overlay">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-overlay-link"
-                  >
-                    View Source ↗
-                  </a>
-                </div>
-                <span className="project-number-badge">0{index + 1}</span>
+              <div className="project-featured-image">
+                <img src={project.src} alt={project.title} />
               </div>
 
-              <div className="project-info">
-                <h3>{project.title}</h3>
+              <div className="project-featured-content">
+                <div className="project-featured-meta">
+                  <span className="project-featured-tag">
+                    {index === 0 ? '⭐ Featured Work' : index === 1 ? '🛠 Side Project' : '🔐 Backend Project'}
+                  </span>
+                  <span className="project-number">0{index + 1}</span>
+                </div>
+
+                <h2>{project.title}</h2>
                 <p>{project.desc}</p>
 
-                <div className="project-footer">
-                  <ul className="tech">
-                    {project.technologies.map((tech, i) => (
-                      <li key={i}>{tech}</li>
-                    ))}
+                <div className="project-featured-footer">
+                  <ul className="project-featured-tech">
+                    {project.technologies.map((t, i) => <li key={i}>{t}</li>)}
                   </ul>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-btn1"
+                    className="project-link-arrow"
                   >
-                    Source ↗
+                    View Source ↗
                   </a>
                 </div>
               </div>
+
+              <span className="project-featured-bg-num" aria-hidden>0{index + 1}</span>
             </div>
           ))}
         </div>
