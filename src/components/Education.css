@@ -99,15 +99,39 @@
   margin-top: 0.75rem;
 }
 
+@media (max-width: 768px) {
+  .education-section {
+    padding: 2.5rem 0;
+  }
+}
+
 @media (max-width: 600px) {
   .education-container {
     flex-direction: column;
     padding: 1.5rem;
+    gap: 1rem;
   }
 
   .education-icon-wrapper {
     width: 44px;
     height: 44px;
     font-size: 1.25rem;
+  }
+
+  .education-title {
+    font-size: 1rem;
+  }
+
+  .education-meta {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .education-meta-item {
+    font-size: 0.78rem;
+  }
+
+  .education-badge {
+    font-size: 0.72rem;
   }
 }

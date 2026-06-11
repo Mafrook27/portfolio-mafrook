@@ -14,6 +14,7 @@
   gap: 1.5rem;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer {
@@ -93,6 +94,10 @@
 }
 
 @media (max-width: 820px) {
+  .contact-section {
+    padding: 3.5rem 0;
+  }
+
   .contact-grid {
     flex-direction: column;
     align-items: stretch;
@@ -101,5 +106,19 @@
   .contact-form-container,
   .reaction-timer {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .footer {
+    padding: 2rem 1.25rem;
+  }
+
+  .footer-logo {
+    font-size: 1rem;
   }
 }

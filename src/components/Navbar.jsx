@@ -96,6 +96,12 @@ const Navbar = ({items}) => {
               );
             })}
           </div>
+          <div className="mobile-menu-footer">
+            <a href="/logos/resume-mafrook.pdf" download className="mobile-menu-footer-cta">
+              Download CV →
+            </a>
+            <p className="mobile-menu-tagline">Open to new opportunities</p>
+          </div>
         </div>
       </nav>
     </>

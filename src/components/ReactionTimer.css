@@ -83,9 +83,30 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .reaction-timer {
-    padding: 1.75rem;
+    padding: 1.5rem;
     max-width: 100%;
+  }
+
+  .reaction-timer-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .reaction-timer-header p {
+    font-size: 0.8rem;
+  }
+
+  .reaction-box {
+    min-height: 100px;
+    padding: 1.25rem;
+  }
+
+  .reaction-box .box-icon {
+    font-size: 1.75rem;
+  }
+
+  .reaction-box p {
+    font-size: 0.9rem;
   }
 }
